@@ -7,5 +7,9 @@ class Validator
 	def split_into_array
 		string.split("")
 	end
+
+	def validate_parentheses
+		split_into_array.include?("(" && ")")
+	end
 end
 
