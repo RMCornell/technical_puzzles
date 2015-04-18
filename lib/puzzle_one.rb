@@ -19,5 +19,17 @@ class Validator
 	def validate_brackets
 		split_into_array.include?("[" && "]")
 	end
+
+	def validate_string
+		if validate_parentheses == true && validate_braces == true && validate_brackets == true
+			puts "Statement #{string} is valid"
+		else
+			puts "Statement #{string} is not valid"
+		end
+	end
 end
+
+
+validator = Validator.new("() slad{} { []fls")
+validator.validate_string
 
