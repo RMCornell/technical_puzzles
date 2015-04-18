@@ -27,6 +27,10 @@ class VaildatorTest < MiniTest::Test
 		assert validator.validate_brackets
 	end
 
+	def test_this_shortcut_reads_with_commit_shortcut
+
+	end
+
 
 
 end
