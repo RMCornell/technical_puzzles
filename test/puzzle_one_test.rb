@@ -17,5 +17,16 @@ class VaildatorTest < MiniTest::Test
 		assert validator.validate_parentheses
 	end
 
+	def test_it_validates_braces
+		validator = Validator.new("({12}[34(56){67}])")
+		assert validator.validate_braces
+	end
+
+	def test_it_validates_brackets
+		validator = Validator.new("({12}[34(56){67}])")
+		assert validator.validate_brackets
+	end
+
+
 
 end
