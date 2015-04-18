@@ -12,5 +12,10 @@ class VaildatorTest < MiniTest::Test
 		assert_equal ["(", "{", "1", "2", "}", "[", "3", "4", "(", "5", "6", ")", "{", "6", "7", "}", "]", ")"], validator.split_into_array
 	end
 
+	def test_it_validates_parentheses
+		validator = Validator.new("({12}[34(56){67}])")
+		assert validator.validate_parentheses
+	end
+
 
 end
