@@ -11,5 +11,9 @@ class Validator
 	def validate_parentheses
 		split_into_array.include?("(" && ")")
 	end
+
+	def validate_braces
+		split_into_array.include?("{" && "}")
+	end
 end
 
