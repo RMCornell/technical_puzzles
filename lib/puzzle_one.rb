@@ -22,14 +22,25 @@ class Validator
 
 	def validate_string
 		if validate_parentheses == true && validate_braces == true && validate_brackets == true
-			puts "Statement #{string} is valid"
+			return true
 		else
-			puts "Statement #{string} is not valid"
+			return false
+		end
+	end
+
+	def validated_output
+		if validate_string == true
+			"String is Valid"
+		else
+			"String is Invalid"
 		end
 	end
 end
 
+#todo add features that will allow for strings with either complete brackets, braces or parentheses to count as well-formed-strings
 
-validator = Validator.new("() slad{} { []fls")
-validator.validate_string
+
+
+
+
 
